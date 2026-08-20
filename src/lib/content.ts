@@ -5,7 +5,14 @@ export const SITE_LINKS = [
   { label: "Email", href: "mailto:ronny.arora@outlook.com" },
 ];
 
-export const WORKED_WITH = ["PwC", "Infosys", "Macmahon", "JB Hi-Fi"];
+export const WORKED_WITH = [
+  "PwC",
+  "Infosys",
+  "Macmahon",
+  "JB Hi-Fi",
+  "Future of Work Institute",
+  "Spotlight Retail Group",
+];
 
 export type Experience = {
   org: string;
@@ -56,6 +63,13 @@ export const EXPERIENCE: Experience[] = [
       "Ranked top 1% nationally for sales performance, generating ~$1.5M in revenue in 2025.",
       "Mentored and onboarded new team members.",
     ],
+  },
+  {
+    org: "Spotlight Retail Group",
+    role: "Retail Sales Specialist",
+    location: "Perth",
+    period: "Jan – Oct 2023 · part-time",
+    bullets: ["General retail sales and customer service, immediately preceding JB Hi-Fi."],
   },
   {
     org: "Future of Work Institute",
