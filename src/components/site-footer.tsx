@@ -5,8 +5,8 @@ export function SiteFooter() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border">
-      <div className="mx-auto flex max-w-3xl flex-col gap-4 px-6 py-8 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
+    <footer className="border-t border-white/10 bg-navy-deep text-fog">
+      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 text-sm sm:flex-row sm:items-center sm:justify-between">
         <p className="flex items-center gap-1.5">
           made with Bruno&apos;s supervision <BrunoIcon className="h-4 w-4" />
         </p>
@@ -17,7 +17,7 @@ export function SiteFooter() {
               href={link.href}
               target={link.href.startsWith("http") ? "_blank" : undefined}
               rel={link.href.startsWith("http") ? "noreferrer" : undefined}
-              className="transition-colors hover:text-ink"
+              className="transition-colors hover:text-white"
             >
               {link.label}
             </a>

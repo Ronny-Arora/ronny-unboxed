@@ -6,6 +6,19 @@ import { BrunoIcon } from "./bruno-icon";
 type BrunoBubbleProps = {
   quip: string;
   align?: "left" | "right";
+  /** "light" = sitting on a cream/white section, "navy" = sitting on a navy section. */
+  tone?: "light" | "navy";
+};
+
+const TONE_STYLES = {
+  light: {
+    button: "border-ink/20 text-ink hover:border-ink",
+    bubble: "border-ink/15 bg-white text-ink",
+  },
+  navy: {
+    button: "border-white/30 text-white hover:border-white",
+    bubble: "border-white/20 bg-navy-soft text-white",
+  },
 };
 
 /**
@@ -13,11 +26,12 @@ type BrunoBubbleProps = {
  * Auto-shows once when scrolled into view, then can be replayed on
  * hover/click/focus.
  */
-export function BrunoBubble({ quip, align = "right" }: BrunoBubbleProps) {
+export function BrunoBubble({ quip, align = "right", tone = "light" }: BrunoBubbleProps) {
   const [open, setOpen] = useState(false);
   const autoShownRef = useRef(false);
   const hideTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const wrapperRef = useRef<HTMLSpanElement>(null);
+  const styles = TONE_STYLES[tone];
 
   useEffect(() => {
     const el = wrapperRef.current;
@@ -61,14 +75,14 @@ export function BrunoBubble({ quip, align = "right" }: BrunoBubbleProps) {
         onFocus={show}
         onBlur={hide}
         aria-label="Bruno has something to say"
-        className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-border text-ink transition-colors hover:border-ink"
+        className={`inline-flex h-8 w-8 items-center justify-center rounded-full border bg-white transition-colors ${styles.button}`}
       >
-        <BrunoIcon className="h-4 w-4" />
+        <BrunoIcon className="h-4.5 w-4.5" />
       </button>
       <span
         role="status"
         aria-hidden={!open}
-        className={`pointer-events-none absolute top-1/2 z-20 w-max max-w-[220px] -translate-y-1/2 rounded-md border border-border bg-paper px-3 py-1.5 text-xs leading-snug text-ink transition-opacity duration-200 ${
+        className={`pointer-events-none absolute top-1/2 z-20 w-max max-w-[220px] -translate-y-1/2 rounded-md border px-3 py-1.5 text-xs leading-snug shadow-sm transition-opacity duration-200 ${styles.bubble} ${
           align === "right" ? "left-full ml-3" : "right-full mr-3"
         } ${open ? "opacity-100" : "opacity-0"}`}
       >

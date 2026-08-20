@@ -5,6 +5,8 @@ export const SITE_LINKS = [
   { label: "Email", href: "mailto:ronny.arora@outlook.com" },
 ];
 
+export const WORKED_WITH = ["PwC", "Infosys", "Macmahon", "JB Hi-Fi"];
+
 export type Experience = {
   org: string;
   role: string;

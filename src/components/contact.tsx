@@ -6,14 +6,14 @@ const otherLinks = SITE_LINKS.filter((link) => link.label !== "Email");
 
 export function Contact() {
   return (
-    <Section id="contact" eyebrow="Contact" title="Get in touch">
+    <Section id="contact" eyebrow="Contact" title="Get in touch" tone="cream">
       <p className="max-w-lg text-sm leading-relaxed text-muted">
         The fastest way to reach me is email — happy to talk about roles,
         collaborations, or anything you saw above.
       </p>
       <a
         href={email.href}
-        className="mt-6 inline-block border-b border-ink pb-0.5 text-base text-ink transition-opacity hover:opacity-70"
+        className="mt-6 inline-block font-display text-3xl font-medium text-ink underline decoration-ink/30 decoration-2 underline-offset-4 transition-colors hover:decoration-ink sm:text-4xl"
       >
         ronny.arora@outlook.com
       </a>
@@ -24,7 +24,7 @@ export function Contact() {
             href={link.href}
             target="_blank"
             rel="noreferrer"
-            className="border-b border-border pb-0.5 text-ink transition-colors hover:border-ink"
+            className="border-b border-ink/20 pb-0.5 text-ink transition-colors hover:border-ink"
           >
             {link.label}
           </a>
