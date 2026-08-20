@@ -6,7 +6,7 @@ export function WorkedWith() {
       <div className="mx-auto max-w-4xl px-6 py-12">
         <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
           <p className="font-mono text-xs uppercase tracking-widest text-muted">Worked with</p>
-          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-3">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 sm:gap-x-10">
             {WORKED_WITH.map((name) => (
               <span
                 key={name}

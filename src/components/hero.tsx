@@ -12,7 +12,7 @@ export function Hero() {
           <p className="font-mono text-xs uppercase tracking-widest text-fog">
             Perth, WA · Software Engineer
           </p>
-          <h1 className="mt-5 font-display text-6xl font-medium leading-[0.95] tracking-tight sm:text-7xl">
+          <h1 className="mt-5 font-display text-5xl font-medium leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
             Raunak
             <br />
             Arora

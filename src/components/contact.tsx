@@ -13,7 +13,7 @@ export function Contact() {
       </p>
       <a
         href={email.href}
-        className="mt-6 inline-block font-display text-3xl font-medium text-ink underline decoration-ink/30 decoration-2 underline-offset-4 transition-colors hover:decoration-ink sm:text-4xl"
+        className="mt-6 inline-block break-all font-display text-xl font-medium text-ink underline decoration-ink/30 decoration-2 underline-offset-4 transition-colors hover:decoration-ink sm:text-3xl md:text-4xl"
       >
         ronny.arora@outlook.com
       </a>
