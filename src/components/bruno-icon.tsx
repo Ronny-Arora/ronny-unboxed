@@ -1,0 +1,58 @@
+type BrunoIconProps = {
+  className?: string;
+};
+
+/**
+ * Line-art icon of Bruno (Ronny's dog) — a fluffy Maltese Shih Tzu face.
+ * Coordinates are generated (not hand-tuned) so the "fluffy" scalloped
+ * outline stays mathematically even; see scripts referenced in git history
+ * if it ever needs regenerating at a different bump count.
+ */
+export function BrunoIcon({ className }: BrunoIconProps) {
+  return (
+    <svg
+      viewBox="0 0 100 100"
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      {/* left ear */}
+      <path
+        d="M 18.75 35.83 A 6.43 6.43 0 0 1 28.90 39.26 A 6.43 6.43 0 0 1 35.37 52.28 A 6.43 6.43 0 0 1 33.27 65.09 A 6.43 6.43 0 0 1 24.19 68.04 A 6.43 6.43 0 0 1 14.97 58.91 A 6.43 6.43 0 0 1 12.55 44.58 A 6.43 6.43 0 0 1 18.75 35.83 Z"
+        fill="#ffffff"
+        stroke="#111111"
+        strokeWidth="2.5"
+        strokeLinejoin="round"
+      />
+      {/* right ear */}
+      <path
+        d="M 81.25 35.83 A 6.43 6.43 0 0 1 87.45 44.58 A 6.43 6.43 0 0 1 85.03 58.91 A 6.43 6.43 0 0 1 75.81 68.04 A 6.43 6.43 0 0 1 66.73 65.09 A 6.43 6.43 0 0 1 64.63 52.28 A 6.43 6.43 0 0 1 71.10 39.26 A 6.43 6.43 0 0 1 81.25 35.83 Z"
+        fill="#ffffff"
+        stroke="#111111"
+        strokeWidth="2.5"
+        strokeLinejoin="round"
+      />
+      {/* fluffy head */}
+      <path
+        d="M 50.00 17.00 A 7.02 7.02 0 0 1 61.10 19.21 A 7.02 7.02 0 0 1 70.51 25.49 A 7.02 7.02 0 0 1 76.79 34.90 A 7.02 7.02 0 0 1 79.00 46.00 A 7.02 7.02 0 0 1 76.79 57.10 A 7.02 7.02 0 0 1 70.51 66.51 A 7.02 7.02 0 0 1 61.10 72.79 A 7.02 7.02 0 0 1 50.00 75.00 A 7.02 7.02 0 0 1 38.90 72.79 A 7.02 7.02 0 0 1 29.49 66.51 A 7.02 7.02 0 0 1 23.21 57.10 A 7.02 7.02 0 0 1 21.00 46.00 A 7.02 7.02 0 0 1 23.21 34.90 A 7.02 7.02 0 0 1 29.49 25.49 A 7.02 7.02 0 0 1 38.90 19.21 A 7.02 7.02 0 0 1 50.00 17.00 Z"
+        fill="#ffffff"
+        stroke="#111111"
+        strokeWidth="2.5"
+        strokeLinejoin="round"
+      />
+      {/* eyes */}
+      <circle cx="41" cy="47" r="3.3" fill="#111111" />
+      <circle cx="59" cy="47" r="3.3" fill="#111111" />
+      {/* nose */}
+      <ellipse cx="50" cy="59" rx="4.6" ry="3.6" fill="#111111" />
+      {/* mouth */}
+      <path
+        d="M 44 64 Q 50 69 56 64"
+        fill="none"
+        stroke="#111111"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
